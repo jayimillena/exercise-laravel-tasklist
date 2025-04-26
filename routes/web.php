@@ -55,7 +55,7 @@ $tasks = [
     ),
 ];
 
-Route::get('/', function () use ($task) {
+Route::get('/', function () use ($tasks) {
     return view('index', [
         'tasks' => $tasks
     ]);
