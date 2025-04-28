@@ -59,7 +59,11 @@ Route::get('/', function () use ($tasks) {
     return view('index', [
         'tasks' => $tasks
     ]);
-});
+})->name('tasks.index');
+
+Route::get('/{id}', function () use ($tasks) {
+    return 'One single task';
+})->name('tasks.show');
 
 Route::get('/hello', function () {
     return 'Hello';
