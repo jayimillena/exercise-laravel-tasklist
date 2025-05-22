@@ -17,7 +17,20 @@ Route::get('/tasks', function () {
 Route::view('/tasks/create', 'create')->name('tasks.create');
 
 Route::post('/tasks/store', function (Request $request) {
-    dd($request->all());
+    $data = $request->validate([
+        'title' => 'required|string|max:255',
+        'description' => 'required|string|max:1000',
+        'long_description' => 'required|string|max:1000',
+    ]);
+
+    $task = new Task;
+    $task->title = $data['title'];
+    $task->description = $data['description'];
+    $task->long_description = $data['long_description'];    
+    
+    $task->save();
+
+    return redirect()->route('tasks.show', ['id' => $task->id]);
 })->name('tasks.store');
 
 Route::get('/tasks/{id}', function ($id) {
