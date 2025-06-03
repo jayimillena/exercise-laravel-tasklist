@@ -2,6 +2,7 @@
 
 @section('title', $task->title)
 @section('content')
+    <a href="{{ route('tasks.edit', $task->id) }}">Edit</a>
     <p>{{ $task->description }}</p>
 
     @if ($task->long_description)
