@@ -9,4 +9,12 @@ use Illuminate\Notifications\Notifiable;
 class Task extends Model
 {
     use HasFactory, Notifiable;
+
+    protected $table = 'tasks';
+
+    protected $fillable = [
+        'title',
+        'description',
+        'long_description',
+    ];
 }

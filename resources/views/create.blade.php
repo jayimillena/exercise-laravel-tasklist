@@ -29,7 +29,7 @@
                 <div class="error-message">{{ $message }}</div>
             @enderror
         </div>
-`
+
         <div>
             <label for="long_description">Long Description</label>
             <textarea name="long_description" id="long_description" rows="10">{{ old('long_description') }}</textarea>

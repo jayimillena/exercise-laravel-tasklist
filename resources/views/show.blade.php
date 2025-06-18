@@ -2,7 +2,7 @@
 
 @section('title', $task->title)
 @section('content')
-    <a href="{{ route('tasks.edit', $task->id) }}">Edit</a>
+    <a href="{{ route('tasks.edit', $task) }}">Edit</a>
     <p>{{ $task->description }}</p>
 
     @if ($task->long_description)
