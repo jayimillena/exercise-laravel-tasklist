@@ -8,5 +8,11 @@
         @empty
             <div>There are no tasks!</div>
         @endforelse
+
+        @if ($tasks->hasPages())
+            <nav>
+                {{ $tasks->links() }}
+            </nav>
+        @endif
     </div>
 @endsection
