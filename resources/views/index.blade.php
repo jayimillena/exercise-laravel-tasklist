@@ -9,7 +9,7 @@
             <div>There are no tasks!</div>
         @endforelse
 
-        @if ($tasks->hasPages())
+        @if ($tasks->count())
             <nav>
                 {{ $tasks->links() }}
             </nav>
