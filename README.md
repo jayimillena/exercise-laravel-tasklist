@@ -4,7 +4,8 @@ exercise-laravel-tasklist
 Author: Jay I. Millena  
 GitHub: https://github.com/jaymillena  
 Laravel Version: 12.x  
-Status: Self-Training / Work-in-Progress
+Status: Self-Training / Completed 
+Hours: 4 hours and 36 minutes 27/27 modules
 
 Description:
 ------------
